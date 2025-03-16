@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import HeroSection from "@/components/hero-section"
 import TestimonialsSection from "@/components/testimonials-section"
 import ProcessSection from "@/components/process-section"
