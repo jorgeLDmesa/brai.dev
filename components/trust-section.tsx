@@ -38,7 +38,7 @@ const trustFactors = [
 
 export default function TrustSection() {
   return (
-    <section className="w-full py-20 bg-zinc-950">
+    <section className="w-full py-20 bg-black overflow-hidden" id="trust">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

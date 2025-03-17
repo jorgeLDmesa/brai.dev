@@ -46,7 +46,7 @@ export default function ProcessSection() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section className="w-full py-20 bg-black overflow-hidden">
+    <section className="w-full py-20 bg-black overflow-hidden" id="process">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -5,7 +5,7 @@ import TestimonialsSection from "@/components/testimonials-section"
 import ProcessSection from "@/components/process-section"
 import TrustSection from "@/components/trust-section"
 import FAQSection from "@/components/faq-section"
-
+import PortfolioSection from "@/components/portfolio-section"
 export default function Home() {
   return (
     <>
@@ -17,6 +17,7 @@ export default function Home() {
       <main className="min-h-screen bg-black text-white">
         <HeroSection />
         <ProcessSection />
+        <PortfolioSection />
         <TestimonialsSection />
         <TrustSection />
         <FAQSection />

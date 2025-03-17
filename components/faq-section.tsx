@@ -87,7 +87,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
 
 export default function FAQSection() {
   return (
-    <section className="w-full py-20 bg-black">
+    <section className="w-full py-20 bg-black overflow-hidden" id="faq">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

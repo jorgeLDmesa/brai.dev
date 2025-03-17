@@ -130,8 +130,11 @@ function TestimonialCard({ videoUrl, quote, name, company, position }: Testimoni
 }
 
 export default function TestimonialsSection() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+
   return (
-    <section className="w-full py-20 bg-black">
+    <section className="relative w-full py-20 bg-black overflow-hidden" id="testimonials">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

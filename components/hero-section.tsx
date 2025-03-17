@@ -1,16 +1,41 @@
 "use client"
 
-import { useState } from "react"
-import { PhoneIcon } from "lucide-react"
+import { useState, useRef } from "react"
+import { PhoneIcon, X } from "lucide-react"
 import Link from "next/link"
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import * as reactSpring from '@react-spring/three'
 
 export default function HeroSection() {
   const [email, setEmail] = useState("")
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const handleSubmit = () => {
+    if (email.trim()) {
+      setIsDialogOpen(true)
+    }
+  }
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+      setIsMenuOpen(false)
+    }
+  }
+
+  const menuItems = [
+    { id: 'hero', label: 'Inicio' },
+    { id: 'process', label: 'Proceso' },
+    { id: 'portfolio', label: 'Portafolio' },
+    { id: 'testimonials', label: 'Testimonios' },
+    { id: 'trust', label: 'Confianza' },
+    { id: 'faq', label: 'FAQ' },
+  ]
 
   return (
-    <div className="relative min-h-screen w-full bg-black overflow-hidden">
+    <div className="relative min-h-screen w-full bg-black overflow-hidden" id="hero">
       {/* Background image overlay */}
       {/* <div
         className="absolute inset-0 opacity-20 z-0"
@@ -56,13 +81,46 @@ export default function HeroSection() {
 
         <div className="flex items-center">
           <span className="mr-2 text-sm md:text-base">menu</span>
-          <button className="flex flex-col justify-center items-center w-8 h-8">
+          <button 
+            className="flex flex-col justify-center items-center w-8 h-8"
+            onClick={() => setIsMenuOpen(true)}
+          >
             <span className="block w-6 h-0.5 bg-white mb-1.5"></span>
             <span className="block w-6 h-0.5 bg-white mb-1.5"></span>
             <span className="block w-6 h-0.5 bg-white"></span>
           </button>
         </div>
       </header>
+
+      {/* Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div 
+            className="absolute inset-0 bg-black/90 backdrop-blur-md"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+          <div className="relative z-10 w-full max-w-md p-8">
+            <button 
+              className="absolute top-0 right-0 p-4 text-white/70 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <X size={28} />
+            </button>
+            <nav className="flex flex-col items-center">
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-3xl font-extrabold my-3 py-2 text-white hover:text-[#D6F050] transition-colors duration-200 tracking-wider"
+                  style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-80px)] px-4 text-center scale-105">
@@ -76,10 +134,11 @@ export default function HeroSection() {
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mb-10 leading-relaxed">
-  Convertimos ideas en productos funcionales, listos para probarse rápido.  
+  Creamos productos funcionales en poco tiempo, diseñados para usarse de inmediato.  
   <br />
-  No solo escribimos código, encontramos soluciones reales.  
+  No solo programamos, resolvemos problemas reales.  
 </p>
+
 
 
         <div className="flex flex-col md:flex-row w-full max-w-2xl">
@@ -89,17 +148,51 @@ export default function HeroSection() {
             </div>
             <input
               type="email"
-              placeholder="Ingresa tu email y te enviaremos algo de 'magia'..."
+              placeholder="Compártenos tu WhatsApp y encontremos la mejor solución para ti.."
               className="w-full h-14 bg-white/60 border-0 pl-12 pr-4 text-black placeholder-gray-600 focus:outline-none focus:ring-0"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <button className="h-14 px-8 bg-[#D6F050] hover:bg-[#c9e340] text-black font-extrabold text-lg rounded-full md:rounded-l-none md:rounded-r-full transition-colors shadow-md">
+          <button 
+            className="h-14 px-8 bg-[#D6F050] hover:bg-[#c9e340] text-black font-extrabold text-lg rounded-full md:rounded-l-none md:rounded-r-full transition-colors shadow-md"
+            onClick={handleSubmit}
+          >
             ¡VAMOS! →
           </button>
         </div>
       </div>
+
+      {/* Dialog */}
+      {isDialogOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/70" onClick={() => setIsDialogOpen(false)}></div>
+          <div className="relative bg-black border border-[#9ACA3C]/50 rounded-2xl p-8 max-w-md w-full z-10 backdrop-blur-lg bg-opacity-80 shadow-xl">
+            <button 
+              className="absolute top-4 right-4 text-white/70 hover:text-white"
+              onClick={() => setIsDialogOpen(false)}
+            >
+              <X size={24} />
+            </button>
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-4 text-[#D6F050]">¡Gracias por contactarnos!</h3>
+              <p className="mb-6 text-lg leading-relaxed">
+                Utilizaremos tu número de WhatsApp para ponernos en contacto contigo y discutir tu proyecto. 
+                Nuestros servicios están diseñados para proyectos con presupuestos a partir de 5M COP (1250 USD), 
+                aunque adaptamos nuestra propuesta a las necesidades específicas de cada cliente.
+              </p>
+              <div className="mt-8">
+                <button 
+                  className="px-8 py-3 bg-[#D6F050] hover:bg-[#c9e340] text-black font-bold rounded-full transition-colors"
+                  onClick={() => setIsDialogOpen(false)}
+                >
+                  Entendido
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
