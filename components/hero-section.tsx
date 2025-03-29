@@ -7,13 +7,114 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import * as reactSpring from '@react-spring/three'
 
 export default function HeroSection() {
-  const [email, setEmail] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
   const [isDialogOpen, setIsDialogOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [phoneError, setPhoneError] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState("")
+  const [manualApiKey, setManualApiKey] = useState("")
+  const [showApiKeyInput, setShowApiKeyInput] = useState(false)
+
+  const validatePhoneNumber = (number: string) => {
+    const digits = number.replace(/\D/g, '');
+    return digits.length === 10;
+  }
 
   const handleSubmit = () => {
-    if (email.trim()) {
+    // Reset errors
+    setPhoneError("")
+    
+    // Validate the phone number format
+    const isValid = validatePhoneNumber(phoneNumber);
+    
+    if (!isValid) {
+      setPhoneError("Por favor, ingresa un número de WhatsApp válido con 10 dígitos");
+      return;
+    }
+    
+    if (phoneNumber.trim()) {
       setIsDialogOpen(true)
+    }
+  }
+
+  const handleSaveToSupabase = async () => {
+    if (!validatePhoneNumber(phoneNumber)) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setSubmitError("");
+    setSubmitSuccess(false);
+    
+    try {
+      // Using the actual Supabase URL from the error message
+      const SUPABASE_URL = 'https://hmqbawztffkliwwrqwjb.supabase.co';
+      
+      // Try to get the API key from environment variables or use the manually entered one
+      let SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+      
+      // Check if we have the key from environment variables
+      if (!SUPABASE_ANON_KEY && !manualApiKey) {
+        setShowApiKeyInput(true);
+        setIsSubmitting(false);
+        setSubmitError("La clave API no está configurada. Por favor, ingrese la clave API para continuar.");
+        return;
+      }
+
+      // Use the manually entered key if available
+      if (manualApiKey) {
+        SUPABASE_ANON_KEY = manualApiKey;
+      }
+      
+      if (!SUPABASE_ANON_KEY) {
+        throw new Error('API key is required');
+      }
+      
+      console.log("Using API key (first 5 chars):", SUPABASE_ANON_KEY.substring(0, 5) + "...");
+      
+      const response = await fetch(
+        `${SUPABASE_URL}/rest/v1/numeros-clientes-pulpo`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            numero: phoneNumber.replace(/\D/g, '')
+          })
+        }
+      );
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Supabase error response:', errorText);
+        
+        // Special handling for authentication errors
+        if (response.status === 401) {
+          setShowApiKeyInput(true);
+          throw new Error("Error de autenticación: La clave API no es válida");
+        }
+        
+        throw new Error(`Error al guardar el número: ${response.status}`);
+      }
+      
+      setSubmitSuccess(true);
+      setPhoneNumber(""); // Clear the input field
+      setIsDialogOpen(false); // Close the dialog
+    } catch (error) {
+      console.error('Error saving phone number:', error);
+      if (error instanceof Error) {
+        setSubmitError(error.message || "Hubo un problema al guardar tu número. Por favor, intenta de nuevo.");
+      } else {
+        setSubmitError("Hubo un problema al guardar tu número. Por favor, intenta de nuevo.");
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -139,19 +240,19 @@ export default function HeroSection() {
   No solo programamos, resolvemos problemas reales.  
 </p>
 
-
-
         <div className="flex flex-col md:flex-row w-full max-w-2xl">
           <div className="relative flex-1 bg-white/30 rounded-l-full rounded-r-full md:rounded-r-none overflow-hidden mb-4 md:mb-0">
             <div className="absolute left-4 top-0 bottom-0 flex items-center pointer-events-none">
               <span className="text-yellow-300 text-xl">👋</span>
             </div>
             <input
-              type="email"
+              type="tel"
+              inputMode="numeric"
+              pattern="[0-9]*"
               placeholder="Compártenos tu WhatsApp y encontremos la mejor solución para ti.."
               className="w-full h-14 bg-white/60 border-0 pl-12 pr-4 text-black placeholder-gray-600 focus:outline-none focus:ring-0"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
           </div>
           <button 
@@ -161,6 +262,15 @@ export default function HeroSection() {
             ¡VAMOS! →
           </button>
         </div>
+        {phoneError && (
+          <p className="text-red-400 mt-2 text-sm">{phoneError}</p>
+        )}
+        {submitError && (
+          <p className="text-red-400 mt-2 text-sm">{submitError}</p>
+        )}
+        {submitSuccess && (
+          <p className="text-green-400 mt-2 text-sm">¡Tu número ha sido guardado con éxito!</p>
+        )}
       </div>
 
       {/* Dialog */}
@@ -181,12 +291,31 @@ export default function HeroSection() {
                 Nuestros servicios están diseñados para proyectos con presupuestos a partir de 5M COP (1250 USD), 
                 aunque adaptamos nuestra propuesta a las necesidades específicas de cada cliente.
               </p>
+              
+              {showApiKeyInput && (
+                <div className="mb-6">
+                  <p className="mb-2 text-yellow-300">Para almacenar tu número, necesitamos la clave API (solo para fines de desarrollo):</p>
+                  <input
+                    type="password"
+                    placeholder="Ingresa la clave API de Supabase"
+                    className="w-full p-2 mb-2 border border-gray-600 bg-black/60 text-white rounded"
+                    value={manualApiKey}
+                    onChange={(e) => setManualApiKey(e.target.value)}
+                  />
+                </div>
+              )}
+              
+              {submitError && (
+                <p className="text-red-400 mb-4 text-sm">{submitError}</p>
+              )}
+              
               <div className="mt-8">
                 <button 
-                  className="px-8 py-3 bg-[#D6F050] hover:bg-[#c9e340] text-black font-bold rounded-full transition-colors"
-                  onClick={() => setIsDialogOpen(false)}
+                  className={`px-8 py-3 bg-[#D6F050] hover:bg-[#c9e340] text-black font-bold rounded-full transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  onClick={handleSaveToSupabase}
+                  disabled={isSubmitting}
                 >
-                  Entendido
+                  {isSubmitting ? 'Guardando...' : 'Entendido'}
                 </button>
               </div>
             </div>
