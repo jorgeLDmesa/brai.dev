@@ -169,8 +169,8 @@ export default function HeroSection() {
       <header className="relative z-10 flex justify-between items-center p-4 md:p-6">
         <div className="flex items-center">
           <PhoneIcon className="h-5 w-5 text-[#9ACA3C] mr-2" />
-          <a href="tel:1-888-303-8580" className="text-white text-sm md:text-base">
-            1-888-303-8580
+          <a href="tel:+573182243673" className="text-white text-sm md:text-base">
+            +57 318 224 36 73
           </a>
         </div>
 
