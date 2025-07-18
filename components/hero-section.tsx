@@ -165,7 +165,7 @@ export default function HeroSection() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between items-center p-4 md:p-6">
+      <header className="relative z-30 flex justify-between items-center p-4 md:p-6 lg:p-8 h-16 md:h-20 lg:h-24">
         <div className="flex items-center">
           <PhoneIcon className="h-5 w-5 text-[#9ACA3C] mr-2" />
           <a href="tel:+573182243673" className="text-white text-sm md:text-base">
@@ -174,7 +174,7 @@ export default function HeroSection() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Link href="/" className="text-[#9ACA3C] font-bold text-2xl md:text-3xl tracking-wider">
+          <Link href="/" className="text-[#9ACA3C] font-bold text-2xl md:text-3xl lg:text-4xl tracking-wider">
             BRAI
           </Link>
         </div>
@@ -223,9 +223,9 @@ export default function HeroSection() {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-80px)] px-4 text-center scale-105">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-4 text-center pt-4 md:pt-6">
         <h1
-          className="text-5xl md:text-7xl lg:text-9xl font-extrabold leading-none tracking-tight mb-4 max-w-5xl"
+          className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-none tracking-tight mb-4 max-w-5xl"
           style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
         >
           LA SOLUCIÓN CORRECTA.
