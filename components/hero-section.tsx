@@ -4,7 +4,6 @@ import { useState, useRef } from "react"
 import { PhoneIcon, X } from "lucide-react"
 import Link from "next/link"
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
-import * as reactSpring from '@react-spring/three'
 
 export default function HeroSection() {
   const [phoneNumber, setPhoneNumber] = useState("")
@@ -176,7 +175,7 @@ export default function HeroSection() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           <Link href="/" className="text-[#9ACA3C] font-bold text-2xl md:text-3xl tracking-wider">
-            PULPO
+            BRAI
           </Link>
         </div>
 
@@ -229,48 +228,29 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl lg:text-9xl font-extrabold leading-none tracking-tight mb-4 max-w-5xl"
           style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
         >
-          SOLUCIONES<sup>*</sup>
+          LA SOLUCIÓN CORRECTA.
           <br />
-          NO SOLO CÓDIGO
+          EN TIEMPO RÉCORD.
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mb-10 leading-relaxed">
-  Creamos productos funcionales en poco tiempo, diseñados para usarse de inmediato.  
-  <br />
-  No solo programamos, resolvemos problemas reales.  
-</p>
+          Somos tu socio tecnológico. Combinamos desarrollo de software experto con inteligencia artificial para entregar resultados que transforman tu negocio.
+        </p>
 
-        <div className="flex flex-col md:flex-row w-full max-w-2xl">
-          <div className="relative flex-1 bg-white/30 rounded-l-full rounded-r-full md:rounded-r-none overflow-hidden mb-4 md:mb-0">
-            <div className="absolute left-4 top-0 bottom-0 flex items-center pointer-events-none">
-              <span className="text-yellow-300 text-xl">👋</span>
-            </div>
-            <input
-              type="tel"
-              inputMode="numeric"
-              pattern="[0-9]*"
-              placeholder="Compártenos tu WhatsApp y encontremos la mejor solución para ti.."
-              className="w-full h-14 bg-white/60 border-0 pl-12 pr-4 text-black placeholder-gray-600 focus:outline-none focus:ring-0"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-            />
-          </div>
+        <div className="flex flex-col sm:flex-row items-center gap-4">
           <button 
-            className="h-14 px-8 bg-[#D6F050] hover:bg-[#c9e340] text-black font-extrabold text-lg rounded-full md:rounded-l-none md:rounded-r-full transition-colors shadow-md"
-            onClick={handleSubmit}
+            onClick={() => scrollToSection('portfolio')}
+            className="bg-[#9ACA3C] text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-white transition-colors duration-300"
           >
-            ¡VAMOS! →
+            Ver Nuestros Proyectos
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-colors duration-300"
+          >
+            Agendar Consultoría
           </button>
         </div>
-        {phoneError && (
-          <p className="text-red-400 mt-2 text-sm">{phoneError}</p>
-        )}
-        {submitError && (
-          <p className="text-red-400 mt-2 text-sm">{submitError}</p>
-        )}
-        {submitSuccess && (
-          <p className="text-green-400 mt-2 text-sm">¡Tu número ha sido guardado con éxito!</p>
-        )}
       </div>
 
       {/* Dialog */}

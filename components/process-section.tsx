@@ -7,37 +7,37 @@ import { Search, Lightbulb, Code, Repeat, Rocket } from "lucide-react"
 const steps = [
   {
     icon: <Search className="h-10 w-10" />,
-    title: "Mesas de trabajo y diagnóstico",
+    title: "Inmersión y Diagnóstico Estratégico",
     description:
-      "Entendemos el problema real antes de programar. Nos metemos en el campo, hablamos con usuarios finales y comprendemos el dolor que necesitamos resolver.",
+      "Nos sumergimos en tu negocio para entender el desafío real. Analizamos procesos y datos para definir juntos la solución tecnológica con el mayor retorno de inversión.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
   {
     icon: <Lightbulb className="h-10 w-10" />,
-    title: "Prototipado y UX",
+    title: "Arquitectura y Prototipado Rápido",
     description:
-      "Diseñamos la experiencia antes de construir. Creamos interfaces intuitivas y eficientes que resuelven el problema de forma elegante.",
+      "Diseñamos una arquitectura sólida y escalable. Creamos prototipos interactivos en tiempo récord para que puedas ver y sentir la solución antes de construirla.",
     color: "from-[#D6F050] to-[#9ACA3C]",
   },
   {
     icon: <Code className="h-10 w-10" />,
-    title: "Desarrollo ágil",
+    title: "Desarrollo Acelerado",
     description:
-      "Creamos un MVP en tiempo récord. No tardamos meses en entregar un producto, sino que iteramos rápido con soluciones viables desde el día uno.",
+      "Nuestro equipo de élite entra en acción. Construimos el software en ciclos cortos, integrando componentes a medida, APIs y, cuando es clave, modelos de IA.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
   {
     icon: <Repeat className="h-10 w-10" />,
-    title: "Iteraciones y mejoras",
+    title: "Iteración y Entrega de Valor",
     description:
-      "Ajustamos el producto en base a feedback real. Refinamos continuamente para asegurar que la solución cumpla exactamente con las necesidades del cliente.",
+      "No desaparecemos por meses. Entregamos valor de forma continua, ajustando la solución con tu feedback para asegurar que el producto final sea perfecto.",
     color: "from-[#D6F050] to-[#9ACA3C]",
   },
   {
     icon: <Rocket className="h-10 w-10" />,
-    title: "Implementación y lanzamiento",
+    title: "Despliegue e Impacto",
     description:
-      "Acompañamos en todo el proceso de implementación. Aseguramos una transición suave y un lanzamiento exitoso del producto final.",
+      "Lanzamos la solución y te acompañamos para asegurar su adopción y medir el impacto en tu negocio. Tu éxito es nuestro éxito.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
 ]
@@ -59,10 +59,10 @@ export default function ProcessSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >
-            CÓMO<span className="text-[#9ACA3C]">*</span> TRABAJAMOS
+            NUESTRO PROCESO<span className="text-[#9ACA3C]">*</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Un enfoque metódico y ágil para transformar ideas en soluciones tecnológicas efectivas.
+            Desde la idea hasta el impacto. Una metodología probada para entregar la solución correcta, rápidamente.
           </p>
         </motion.div>
 

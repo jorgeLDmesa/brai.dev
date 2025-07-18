@@ -17,68 +17,75 @@ interface Project {
   category: ProjectCategory[]
   technologies: string[]
   link?: string
+  aiFeature?: string
 }
 
 // Datos de ejemplo para los proyectos
 const projects: Project[] = [
   {
     id: 1,
-    title: "Sistema de Gestión Hospitalaria",
+    title: "Optimización de Rutas para Logística",
     description:
-      "Plataforma integral para la gestión de pacientes, citas y expedientes médicos. Redujo el tiempo de atención en un 40%.",
-    imageUrl: "/placeholder.svg?height=600&width=800&text=Sistema+Hospitalario",
-    category: ["web", "backend"],
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
+      "Desarrollamos un sistema que utiliza algoritmos genéticos para calcular las rutas de entrega más eficientes, reduciendo costos de combustible en un 25%.",
+    imageUrl: "/placeholder.svg?height=600&width=800&text=Logística+IA",
+    category: ["web", "backend", "ai"],
+    technologies: ["Python", "Flask", "PostgreSQL", "React"],
     link: "#",
+    aiFeature: "Algoritmos de Optimización"
   },
   {
     id: 2,
-    title: "App de Delivery para Restaurantes",
+    title: "Detección de Fraude en Transacciones",
     description:
-      "Aplicación móvil que permitió a restaurantes locales aumentar sus ventas en un 60% durante la pandemia.",
-    imageUrl: "/placeholder.svg?height=600&width=800&text=App+Delivery",
-    category: ["mobile"],
-    technologies: ["React Native", "Firebase", "Stripe", "Google Maps API"],
+      "Implementamos un modelo de machine learning que analiza patrones en tiempo real para detectar y bloquear transacciones fraudulentas con un 99.8% de precisión.",
+    imageUrl: "/placeholder.svg?height=600&width=800&text=Detección+Fraude",
+    category: ["backend", "ai"],
+    technologies: ["Python", "TensorFlow", "Kafka", "Node.js"],
     link: "#",
+    aiFeature: "Machine Learning en Tiempo Real"
   },
   {
     id: 3,
-    title: "Plataforma de E-learning",
+    title: "Plataforma de E-learning Adaptativo",
     description:
-      "Sistema completo de aprendizaje en línea con cursos, evaluaciones y certificaciones. Más de 10,000 usuarios activos.",
-    imageUrl: "/placeholder.svg?height=600&width=800&text=E-learning",
-    category: ["web", "backend"],
+      "Sistema que personaliza el contenido educativo para cada estudiante según su ritmo de aprendizaje, utilizando redes neuronales para recomendar los siguientes pasos.",
+    imageUrl: "/placeholder.svg?height=600&width=800&text=E-learning+Adaptativo",
+    category: ["web", "backend", "ai"],
     technologies: ["Vue.js", "Django", "PostgreSQL", "AWS"],
     link: "#",
+    aiFeature: "Redes Neuronales"
   },
   {
     id: 4,
-    title: "Asistente Virtual con IA",
+    title: "Asistente Virtual con NLP Avanzado",
     description:
-      "Chatbot inteligente para atención al cliente que resuelve el 85% de las consultas sin intervención humana.",
+      "Chatbot que comprende y responde consultas complejas en lenguaje natural, automatizando el 85% del soporte al cliente con alta satisfacción.",
     imageUrl: "/placeholder.svg?height=600&width=800&text=Asistente+IA",
     category: ["ai", "web"],
-    technologies: ["Python", "TensorFlow", "NLP", "WebSockets"],
+    technologies: ["Python", "Rasa", "NLP", "WebSockets"],
     link: "#",
+    aiFeature: "Procesamiento de Lenguaje Natural"
   },
   {
     id: 5,
-    title: "Sistema de Inventario RFID",
-    description: "Solución para gestión de inventario en tiempo real con tecnología RFID. Redujo pérdidas en un 30%.",
-    imageUrl: "/placeholder.svg?height=600&width=800&text=Sistema+RFID",
-    category: ["backend", "web"],
-    technologies: ["C#", ".NET", "SQL Server", "Angular"],
+    title: "Mantenimiento Predictivo Industrial",
+    description: "Solución IoT que utiliza sensores y modelos predictivos para anticipar fallos en maquinaria, reduciendo el tiempo de inactividad en un 70%.",
+    imageUrl: "/placeholder.svg?height=600&width=800&text=Mantenimiento+Predictivo",
+    category: ["backend", "web", "ai"],
+    technologies: ["Python", "scikit-learn", "MQTT", "Grafana"],
     link: "#",
+    aiFeature: "Modelos Predictivos"
   },
   {
     id: 6,
-    title: "App de Finanzas Personales",
+    title: "App con Análisis de Sentimiento",
     description:
-      "Aplicación móvil para control de gastos e inversiones con análisis predictivo. 4.8/5 estrellas en App Store.",
-    imageUrl: "/placeholder.svg?height=600&width=800&text=Finanzas+App",
+      "Aplicación móvil que analiza reviews de productos y extrae insights valiosos sobre la opinión del cliente, utilizando análisis de sentimiento.",
+    imageUrl: "/placeholder.svg?height=600&width=800&text=Análisis+Sentimiento",
     category: ["mobile", "ai"],
-    technologies: ["Flutter", "Firebase", "ML Kit", "Plaid API"],
+    technologies: ["Flutter", "Firebase", "Google Cloud AI", "Plaid API"],
     link: "#",
+    aiFeature: "Análisis de Sentimiento"
   },
 ]
 
@@ -102,6 +109,13 @@ function ProjectCard({ project }: { project: Project }) {
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
+        
+        {project.aiFeature && (
+          <div className="absolute top-4 right-4 bg-[#9ACA3C] text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+            <BrainCircuit className="w-4 h-4" />
+            <span>IA: {project.aiFeature}</span>
+          </div>
+        )}
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform">
@@ -181,8 +195,15 @@ export default function PortfolioSection() {
   const filteredProjects =
     activeCategory === "todos" ? projects : projects.filter((project) => project.category.includes(activeCategory))
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="w-full py-20 bg-zinc-950">
+    <section className="w-full py-20 bg-zinc-950" id="portfolio">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -195,10 +216,10 @@ export default function PortfolioSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >
-            NUESTROS<span className="text-[#9ACA3C]">*</span> PROYECTOS
+            CASOS DE<span className="text-[#9ACA3C]"></span> ÉXITO
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Soluciones tecnológicas que han transformado negocios y generado resultados reales.
+            Explora cómo hemos aplicado la inteligencia artificial y software  para resolver problemas complejos y generar valor real.
           </p>
         </motion.div>
 
@@ -218,10 +239,13 @@ export default function PortfolioSection() {
           className="mt-16 text-center"
         >
           <p className="text-xl text-gray-300 mb-8">
-            ¿Tienes un proyecto en mente? Podemos ayudarte a hacerlo realidad.
+          ¿Tareas repetitivas o procesos lentos? Podemos ayudarte a automatizarlos.
           </p>
-          <button className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all transform hover:scale-105">
-            Contáctanos para un presupuesto
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all transform hover:scale-105"
+          >
+            Contáctanos 
           </button>
         </motion.div>
       </div>

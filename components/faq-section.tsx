@@ -120,10 +120,6 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-xl text-gray-300 mb-8">¿Tienes más preguntas? Estamos aquí para ayudarte.</p>
-          <button className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all transform hover:scale-105">
-            Contáctanos ahora
-          </button>
         </motion.div>
       </div>
     </section>
