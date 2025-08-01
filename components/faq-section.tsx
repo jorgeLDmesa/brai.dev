@@ -11,34 +11,39 @@ type FAQItemProps = {
 
 const faqs: FAQItemProps[] = [
   {
-    question: "¿Cuánto va a costar el desarrollo?",
+    question: "¿Qué incluye la auditoría gratuita?",
     answer:
-      "El costo varía según la complejidad del proyecto. Ofrecemos presupuestos personalizados basados en tus necesidades específicas. Además, contamos con facilidades de pago en cuotas según el avance del proyecto, aceptando transferencias bancarias, tarjetas de crédito y plataformas digitales.",
+      "La auditoría incluye: análisis completo de tus procesos actuales, identificación de oportunidades de automatización, matrices de ROI detalladas, proyección de ahorros en tiempo y dinero, y un plan de implementación personalizado. Todo esto sin compromiso y con resultados entregados en 48 horas.",
   },
   {
-    question: "¿Cuánto tiempo va a tardar?",
+    question: "¿Cuál es la diferencia entre BRAI Partner y BRAI AaaS?",
     answer:
-      "Nuestro enfoque ágil nos permite entregar MVPs funcionales en tiempos récord. La mayoría de nuestros clientes validan su MVP con éxito antes de los 3 meses. El tiempo exacto dependerá de la complejidad del proyecto, pero siempre trabajamos con iteraciones rápidas para que puedas ver resultados desde el principio.",
+      "BRAI Partner es un modelo integral donde nos convertimos en tu socio estratégico por mínimo 18 meses, incluyendo múltiples automatizaciones, consultoría continua y soporte 24/7. BRAI AaaS es para automatizaciones específicas con pago 50% inicio + 50% entrega + mensualidad de mantenimiento.",
   },
   {
-    question: "¿Realmente vale la pena esta inversión?",
+    question: "¿Realmente puedo ahorrar más del 70% del tiempo?",
     answer:
-      "Absolutamente. Cada día que pasa sin una solución tecnológica efectiva, tu negocio pierde oportunidades. Un MVP rápido te permite validar tu idea antes de invertir más, y nuestro enfoque en UX mejora la adopción hasta en un 40%. Además, si no lo haces tú, otro competidor lo hará primero.",
+      "Sí, es nuestra garantía. Nuestras automatizaciones están diseñadas para eliminar tareas repetitivas y optimizar workflows. Si no alcanzas mínimo 70% de ahorro de tiempo en el proceso automatizado, trabajamos hasta lograrlo sin costo adicional.",
   },
   {
-    question: "¿Y si el software no cumple con mis expectativas?",
+    question: "¿Cuánto tiempo toma implementar una automatización?",
     answer:
-      "Ofrecemos una póliza de garantía que cubre cualquier inconveniente con el producto entregado. Si algo no funciona como se especificó, lo arreglamos sin costo adicional. Nuestro proceso incluye iteraciones constantes basadas en tu feedback, asegurando que el producto final cumpla exactamente con tus expectativas.",
+      "Después de la auditoría y aprobación, la implementación típica toma entre 2-6 semanas dependiendo de la complejidad. Usamos metodología ágil con entregas parciales, para que veas progreso constantemente y puedas dar feedback durante el proceso.",
   },
   {
-    question: "¿Qué incluye exactamente su servicio?",
+    question: "¿Qué pasa si mi equipo no sabe usar la automatización?",
     answer:
-      "Nuestro servicio incluye: consultoría inicial y mesas de trabajo, diseño UX/UI con prototipado, desarrollo del MVP funcional, iteraciones y ajustes según feedback real, y acompañamiento en la implementación. No solo entregamos código, sino una solución completa a tu problema.",
+      "Incluimos capacitación completa de tu equipo como parte del servicio. Además, proporcionamos documentación detallada, videos tutoriales y soporte técnico continuo. Nuestro objetivo es que tu equipo se sienta cómodo y confiado usando las nuevas herramientas.",
   },
   {
-    question: "¿Cómo se diferencian de otras empresas de desarrollo?",
+    question: "¿Pueden integrarse con nuestros sistemas actuales?",
     answer:
-      "Nuestra mayor fortaleza es la velocidad y precisión en la entrega de soluciones. No solo desarrollamos software, sino que nos metemos en el problema del cliente y trabajamos desde la raíz. Ofrecemos MVPs rápidos y funcionales, UX bien pensada, mesas de trabajo en campo, y flexibilidad total para adaptarnos a tus necesidades específicas.",
+      "Sí, nuestras automatizaciones se diseñan para integrarse perfectamente con tus sistemas existentes (CRM, ERP, bases de datos, etc.). Realizamos un análisis técnico durante la auditoría para asegurar compatibilidad total sin interrumpir tus operaciones actuales.",
+  },
+  {
+    question: "¿Qué garantías ofrecen en sus servicios?",
+    answer:
+      "Garantizamos mínimo 70% ahorro de tiempo y 50% reducción de costos en procesos automatizados. Ofrecemos soporte técnico incluido, actualizaciones gratuitas por el primer año, y una garantía de funcionamiento. Si no cumplimos las expectativas, trabajamos hasta lograrlo.",
   },
 ]
 

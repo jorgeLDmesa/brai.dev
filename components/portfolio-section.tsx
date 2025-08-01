@@ -396,16 +396,16 @@ export default function PortfolioSection() {
           className="text-center mb-16"
         >
           <p className="text-lg text-[#9ACA3C] mb-4 font-medium">
-            Algunos de nuestros proyectos
+            Resultados reales de nuestros clientes
           </p>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >
-            CASOS DE<span className="text-[#9ACA3C]"></span> ÉXITO
+            CASOS DE<span className="text-[#9ACA3C]">*</span> ÉXITO
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explora cómo hemos aplicado la inteligencia artificial y software para resolver problemas complejos y generar valor real.
+            Descubre cómo nuestras automatizaciones han transformado empresas reales, liberando +70% del tiempo y reduciendo costos significativamente.
           </p>
         </motion.div>
 
@@ -443,13 +443,13 @@ export default function PortfolioSection() {
           className="mt-16 text-center"
         >
           <p className="text-xl text-gray-300 mb-8">
-          ¿Tareas repetitivas o procesos lentos? Podemos ayudarte a automatizarlos.
+          ¿Procesos lentos en tu empresa? Descubre cuánto tiempo y dinero puedes ahorrar.
           </p>
           <button 
             onClick={() => scrollToSection('contact')}
             className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all transform hover:scale-105"
           >
-            Contáctanos 
+            🚀 Solicitar Auditoría GRATUITA
           </button>
         </motion.div>
       </div>
