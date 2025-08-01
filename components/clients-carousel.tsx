@@ -15,6 +15,13 @@ export default function ClientsCarousel() {
   // Duplicamos los clientes para hacer el scroll infinito más fluido
   const duplicatedClients = [...clients, ...clients, ...clients]
 
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="w-full py-20 bg-zinc-950 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -115,6 +122,7 @@ export default function ClientsCarousel() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToContact}
             className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >

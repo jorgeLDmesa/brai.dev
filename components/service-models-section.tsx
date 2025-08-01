@@ -39,6 +39,7 @@ function ModelCard({
   isPremium = false,
   gradient,
   buttonText,
+  onButtonClick,
   children,
 }: {
   title: string
@@ -50,6 +51,7 @@ function ModelCard({
   isPremium?: boolean
   gradient: string
   buttonText: string
+  onButtonClick: () => void
   children?: React.ReactNode
 }) {
   return (
@@ -115,6 +117,7 @@ function ModelCard({
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        onClick={onButtonClick}
         className={`w-full py-4 rounded-full font-bold text-lg transition-all ${
           isPremium
             ? "bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black hover:from-[#D6F050] hover:to-[#9ACA3C]"
@@ -129,6 +132,13 @@ function ModelCard({
 }
 
 export default function ServiceModelsSection() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="w-full py-20 bg-black">
       <div className="container mx-auto px-4">
@@ -161,6 +171,7 @@ export default function ServiceModelsSection() {
             isPremium={true}
             gradient="from-[#9ACA3C] to-[#D6F050]"
             buttonText="Convertirse en Partner BRAI"
+            onButtonClick={() => scrollToSection('contact')}
           >
             <div className="mb-6 bg-zinc-800 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
@@ -190,6 +201,7 @@ export default function ServiceModelsSection() {
             isPopular={true}
             gradient="from-[#D6F050] to-[#9ACA3C]"
             buttonText="Comenzar mi Automatización"
+            onButtonClick={() => scrollToSection('contact')}
           >
             <div className="mb-6 bg-gradient-to-r from-zinc-800 to-zinc-700 rounded-lg p-4">
               <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -237,7 +249,10 @@ export default function ServiceModelsSection() {
           className="mt-16 text-center"
         >
           <p className="text-xl text-gray-300 mb-8">¿No estás seguro cuál modelo es mejor para ti?</p>
-          <button className="px-8 py-4 bg-transparent border-2 border-[#9ACA3C] text-[#9ACA3C] font-bold rounded-full text-lg hover:bg-[#9ACA3C] hover:text-black transition-all transform hover:scale-105">
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="px-8 py-4 bg-transparent border-2 border-[#9ACA3C] text-[#9ACA3C] font-bold rounded-full text-lg hover:bg-[#9ACA3C] hover:text-black transition-all transform hover:scale-105"
+          >
             Hablar con un Especialista
           </button>
         </motion.div>

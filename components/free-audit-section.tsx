@@ -85,6 +85,13 @@ function FeatureCard({
 }
 
 export default function FreeAuditSection() {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section className="w-full py-20 bg-zinc-950">
       <div className="container mx-auto px-4">
@@ -180,6 +187,7 @@ export default function FreeAuditSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToContact}
             className="px-12 py-6 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold text-xl rounded-full transition-all hover:from-[#D6F050] hover:to-[#9ACA3C] shadow-lg hover:shadow-xl"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >
