@@ -16,25 +16,25 @@ const testimonials: TestimonialProps[] = [
   {
     videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
     quote:
-      "King Kong transformó completamente nuestro negocio. Aumentamos nuestros ingresos en un 300% en solo 6 meses. Su enfoque estratégico y su atención al detalle son incomparables.",
+      "BRAI automatizó nuestro proceso de facturación y ahorramos 15 horas semanales. El retorno de inversión se vio en el primer mes. Su equipo realmente entiende las necesidades empresariales.",
     name: "Carlos Rodríguez",
-    company: "TechSolutions",
+    company: "ManufacturaTech",
     position: "CEO",
   },
   {
     videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
     quote:
-      "Nunca pensé que podríamos escalar tan rápido. King Kong nos ayudó a optimizar nuestras campañas y ahora estamos generando más leads de los que podemos manejar.",
+      "Con el modelo BRAI Partner, no solo automatizaron nuestros procesos, sino que se convirtieron en nuestro aliado estratégico. Crecimos 200% en 8 meses y liberamos a nuestro equipo para tareas de mayor valor.",
     name: "María González",
-    company: "InnovateMKT",
-    position: "Directora de Marketing",
+    company: "ServicesPro",
+    position: "Directora Operativa",
   },
   {
     videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
     quote:
-      "El ROI que hemos obtenido trabajando con King Kong ha superado todas nuestras expectativas. Su equipo realmente entiende cómo hacer crecer un negocio de manera sostenible.",
+      "La auditoría gratuita de BRAI nos mostró exactamente dónde estábamos perdiendo tiempo y dinero. Implementaron una solución que nos ahorra $8,000 mensuales. Impresionante profesionalismo.",
     name: "Alejandro Méndez",
-    company: "GrowthPartners",
+    company: "LogisticaMax",
     position: "Fundador",
   },
 ]
@@ -147,10 +147,10 @@ export default function TestimonialsSection() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
             style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
           >
-            CASOS<span className="text-[#9ACA3C]">*</span> DE ÉXITO
+            NUESTROS CLIENTES<span className="text-[#9ACA3C]">*</span> HABLAN
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Nuestros clientes están viendo un crecimiento exponencial. Escucha sus historias.
+            Resultados reales, testimonios auténticos. Descubre cómo hemos transformado empresas con nuestras automatizaciones.
           </p>
         </motion.div>
 

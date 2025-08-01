@@ -228,27 +228,27 @@ export default function HeroSection() {
           className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-none tracking-tight mb-4 max-w-5xl"
           style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
         >
-          LA SOLUCIÓN CORRECTA.
+          AUTOMATIZA TODO.
           <br />
-          EN TIEMPO RÉCORD.
+          AHORRA 70% DEL TIEMPO.
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mb-10 leading-relaxed">
-          Somos tu socio tecnológico. Combinamos desarrollo de software experto con inteligencia artificial para entregar resultados que transforman tu negocio.
+          Somos BRAI, la agencia de automatización con IA que libera a tu equipo de tareas repetitivas. Garantizamos +70% ahorro de tiempo y +50% reducción de costos.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <button 
-            onClick={() => scrollToSection('portfolio')}
-            className="bg-[#9ACA3C] text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-white transition-colors duration-300"
+            onClick={() => scrollToSection('contact')}
+            className="bg-[#9ACA3C] text-black font-bold py-4 px-10 rounded-full text-xl hover:bg-white transition-colors duration-300"
           >
-            Ver Nuestros Proyectos
+            🚀 Auditoría GRATUITA
           </button>
           <button 
-            onClick={() => scrollToSection('contact')}
-            className="border-2 border-white text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-colors duration-300"
+            onClick={() => scrollToSection('portfolio')}
+            className="border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-colors duration-300"
           >
-            Agendar Consultoría
+            Ver Casos de Éxito
           </button>
         </div>
       </div>

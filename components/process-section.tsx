@@ -2,42 +2,42 @@
 
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { Search, Lightbulb, Code, Repeat, Rocket } from "lucide-react"
+import { Search, BarChart3, Code, Rocket, RefreshCw } from "lucide-react"
 
 const steps = [
   {
     icon: <Search className="h-10 w-10" />,
-    title: "Inmersión y Diagnóstico Estratégico",
+    title: "Auditoría y Diagnóstico",
     description:
-      "Nos sumergimos en tu negocio para entender el desafío real. Analizamos procesos y datos para definir juntos la solución tecnológica con el mayor retorno de inversión.",
+      "Análisis exhaustivo de tus procesos actuales. Identificamos oportunidades de automatización y calculamos el potencial de ahorro en tiempo y dinero. Todo esto completamente GRATIS.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
   {
-    icon: <Lightbulb className="h-10 w-10" />,
-    title: "Arquitectura y Prototipado Rápido",
+    icon: <BarChart3 className="h-10 w-10" />,
+    title: "Presentación de Resultados",
     description:
-      "Diseñamos una arquitectura sólida y escalable. Creamos prototipos interactivos en tiempo récord para que puedas ver y sentir la solución antes de construirla.",
+      "Te entregamos un reporte detallado con matrices de ROI, proyección de ahorros y plan de implementación personalizado. Conocerás exactamente el impacto antes de decidir.",
     color: "from-[#D6F050] to-[#9ACA3C]",
   },
   {
     icon: <Code className="h-10 w-10" />,
-    title: "Desarrollo Acelerado",
+    title: "Implementación (Post-aprobación)",
     description:
-      "Nuestro equipo de élite entra en acción. Construimos el software en ciclos cortos, integrando componentes a medida, APIs y, cuando es clave, modelos de IA.",
+      "Una vez aprobada la propuesta, desarrollamos e integramos las soluciones de automatización con tus sistemas existentes, siguiendo las mejores prácticas de la industria.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
   {
-    icon: <Repeat className="h-10 w-10" />,
-    title: "Iteración y Entrega de Valor",
+    icon: <Rocket className="h-10 w-10" />,
+    title: "Puesta en Marcha",
     description:
-      "No desaparecemos por meses. Entregamos valor de forma continua, ajustando la solución con tu feedback para asegurar que el producto final sea perfecto.",
+      "Capacitamos a tu equipo, realizamos monitoreo intensivo inicial y ejecutamos los ajustes necesarios para garantizar el funcionamiento óptimo de la automatización.",
     color: "from-[#D6F050] to-[#9ACA3C]",
   },
   {
-    icon: <Rocket className="h-10 w-10" />,
-    title: "Despliegue e Impacto",
+    icon: <RefreshCw className="h-10 w-10" />,
+    title: "Seguimiento y Mejoras",
     description:
-      "Lanzamos la solución y te acompañamos para asegurar su adopción y medir el impacto en tu negocio. Tu éxito es nuestro éxito.",
+      "Recopilamos feedback continuo, realizamos actualizaciones basadas en el uso real y optimizamos constantemente para maximizar los beneficios de tu inversión.",
     color: "from-[#9ACA3C] to-[#D6F050]",
   },
 ]
