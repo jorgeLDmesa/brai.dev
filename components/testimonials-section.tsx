@@ -14,7 +14,7 @@ type TestimonialProps = {
 
 const testimonials: TestimonialProps[] = [
   {
-    videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
+    videoUrl: "#",
     quote:
       "BRAI automatizó nuestro proceso de facturación y ahorramos 15 horas semanales. El retorno de inversión se vio en el primer mes. Su equipo realmente entiende las necesidades empresariales.",
     name: "Carlos Rodríguez",
@@ -22,7 +22,7 @@ const testimonials: TestimonialProps[] = [
     position: "CEO",
   },
   {
-    videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
+    videoUrl: "#",
     quote:
       "Con el modelo BRAI Partner, no solo automatizaron nuestros procesos, sino que se convirtieron en nuestro aliado estratégico. Crecimos 200% en 8 meses y liberamos a nuestro equipo para tareas de mayor valor.",
     name: "María González",
@@ -30,7 +30,7 @@ const testimonials: TestimonialProps[] = [
     position: "Directora Operativa",
   },
   {
-    videoUrl: "https://expertos-tematicos-papeleo.s3.us-east-2.amazonaws.com/WhatsApp+Video+2025-03-14+at+18.21.38.mp4",
+    videoUrl: "#",
     quote:
       "La auditoría gratuita de BRAI nos mostró exactamente dónde estábamos perdiendo tiempo y dinero. Implementaron una solución que nos ahorra $8,000 mensuales. Impresionante profesionalismo.",
     name: "Alejandro Méndez",
