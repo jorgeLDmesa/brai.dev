@@ -94,7 +94,12 @@ function ModelCard({
       </div>
 
       <div className="mb-8">
-        <h4 className="text-white font-semibold mb-4">{title === "BRAI Partner" ? "Incluye:" : "Modelo de pago:"}</h4>
+        <h4 
+          className="text-white font-semibold mb-4"
+          style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
+        >
+          {title === "BRAI Partner" ? "Incluye:" : "Modelo de pago:"}
+        </h4>
         <ul className="space-y-3">
           {features.map((feature, index) => (
             <motion.li
@@ -140,7 +145,7 @@ export default function ServiceModelsSection() {
   }
 
   return (
-    <section className="w-full py-20 bg-black">
+    <section className="w-full py-20 bg-black" id="models">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -204,7 +209,10 @@ export default function ServiceModelsSection() {
             onButtonClick={() => scrollToSection('contact')}
           >
             <div className="mb-6 bg-gradient-to-r from-zinc-800 to-zinc-700 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+              <h4 
+                className="text-white font-semibold mb-3 flex items-center gap-2"
+                style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
+              >
                 <TrendingUp className="h-5 w-5" />
                 Garantías de Resultados:
               </h4>

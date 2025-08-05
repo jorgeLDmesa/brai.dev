@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { PhoneIcon, X } from "lucide-react"
 import Link from "next/link"
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
@@ -127,10 +127,10 @@ export default function HeroSection() {
 
   const menuItems = [
     { id: 'hero', label: 'Inicio' },
+    { id: 'models', label: 'Modelos' },
     { id: 'process', label: 'Proceso' },
     { id: 'portfolio', label: 'Portafolio' },
     { id: 'testimonials', label: 'Testimonios' },
-    { id: 'trust', label: 'Confianza' },
     { id: 'faq', label: 'FAQ' },
   ]
 

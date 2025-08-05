@@ -163,7 +163,7 @@ function VideoModal({
             <div className="p-6">
               <h3
                 className="text-2xl font-bold mb-2 text-white"
-                style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
               >
                 {project.title}
               </h3>
@@ -243,7 +243,7 @@ function ProjectCard({
       <div className="absolute bottom-0 left-0 right-0 p-4 z-10 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
         <h3
           className="text-xl font-bold text-white drop-shadow-lg"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+          style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
         >
           {project.title}
         </h3>
@@ -253,7 +253,7 @@ function ProjectCard({
       <div className="absolute inset-0 p-6 z-20 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center">
         <h3
           className="text-2xl font-bold mb-4 text-white drop-shadow-lg"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+          style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
         >
           {project.title}
         </h3>
