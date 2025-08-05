@@ -71,7 +71,7 @@ export default function TeamSection() {
                   className="w-full h-full rounded-full object-cover object-center border-4 border-zinc-800 group-hover:border-[#9ACA3C] transition-colors duration-300"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-white">{member.name}</h3>
+              <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}>{member.name}</h3>
               <p className="text-[#9ACA3C] font-semibold mb-2">{member.role}</p>
               <p className="text-gray-400 text-sm mb-4 px-4">{member.bio}</p>
               <div className="flex gap-4">

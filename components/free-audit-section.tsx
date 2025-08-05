@@ -75,7 +75,8 @@ function FeatureCard({
       </div>
       <h3
         className="text-lg font-bold text-white mb-2"
-        style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+        // style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif", fontWeight: 300 }}
+        style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
       >
         {title}
       </h3>
@@ -166,7 +167,7 @@ export default function FreeAuditSection() {
                 <div>
                   <h4
                     className="text-white font-bold mb-1"
-                    style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                    style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}
                   >
                     {item.title}
                   </h4>
