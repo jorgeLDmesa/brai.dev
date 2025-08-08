@@ -1,8 +1,8 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
-import { Linkedin, Github } from "lucide-react"
+import { LinkedinIcon, GithubIcon } from "lucide-react"
+import { ResponsiveImage } from "./responsive-image"
 
 const teamMembers = [
   {
@@ -63,12 +63,14 @@ export default function TeamSection() {
               className="group relative flex flex-col items-center text-center"
             >
               <div className="relative w-40 h-40 mb-4">
-                <Image
+                <ResponsiveImage
                   src={member.imageUrl}
                   alt={member.name}
                   width={160}
                   height={160}
                   className="w-full h-full rounded-full object-cover object-center border-4 border-zinc-800 group-hover:border-[#9ACA3C] transition-colors duration-300"
+                  priority={index === 0}
+                  sizes="(max-width: 640px) 150px, (max-width: 1024px) 300px, 600px"
                 />
               </div>
               <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'Inter', 'Arial', sans-serif" }}>{member.name}</h3>
@@ -76,11 +78,13 @@ export default function TeamSection() {
               <p className="text-gray-400 text-sm mb-4 px-4">{member.bio}</p>
               <div className="flex gap-4">
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#9ACA3C]">
-                  <Linkedin size={20} />
+                  <LinkedinIcon size={20} />
                 </a>
-                <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#9ACA3C]">
-                  <Github size={20} />
-                </a>
+                {member.github && (
+                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#9ACA3C]">
+                    <GithubIcon size={20} />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

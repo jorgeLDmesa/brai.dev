@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 
 const clients = [
-  { name: "COPALG", logo: "/copalg-logo.png" },
-  { name: "Nutrinor", logo: "/nutrinor-logo.png" },
-  { name: "GIO", logo: "/gio-logo.png" },
-  { name: "Guayacanes", logo: "/guayacanes-logo.png" },
-  { name: "Nubesti", logo: "/nubesti-logo.png" },
-  { name: "Ancla", logo: "/ancla-logo.png" },
+  { name: "COPALG", logo: "/copalg-logo.webp" },
+  { name: "Nutrinor", logo: "/nutrinor-logo.webp" },
+  { name: "GIO", logo: "/gio-logo.webp" },
+  { name: "Guayacanes", logo: "/guayacanes-logo.webp" },
+  { name: "Nubesti", logo: "/nubesti-logo.webp" },
+  { name: "Ancla", logo: "/ancla-logo.webp" },
 ]
 
 export default function ClientsCarousel() {
@@ -95,11 +95,23 @@ export default function ClientsCarousel() {
                   key={`${client.name}-${index}`}
                   className="flex-shrink-0 flex items-center justify-center h-20 w-40 group"
                 >
-                  <img
-                    src={client.logo || "/placeholder.svg"}
-                    alt={`${client.name} logo`}
-                    className="max-h-16 max-w-36 w-auto h-auto object-contain filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 group-hover:scale-110"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 640px)"
+                      srcSet={client.logo?.replace('.webp', '-sm.webp') || "/placeholder.svg"}
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 1024px)"
+                      srcSet={client.logo?.replace('.webp', '-md.webp') || "/placeholder.svg"}
+                      type="image/webp"
+                    />
+                    <img
+                      src={client.logo || "/placeholder.svg"}
+                      alt={`${client.name} logo`}
+                      className="max-h-16 max-w-36 w-auto h-auto object-contain filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500 group-hover:scale-110"
+                    />
+                  </picture>
                 </div>
               ))}
             </div>
