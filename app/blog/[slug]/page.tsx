@@ -43,31 +43,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 function ArticleJsonLd({ post }: { post: Post }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    datePublished: post.published_at,
-    dateModified: post.updated_at,
-    image: post.cover_image_url || undefined,
-    author: {
-      "@type": "Organization",
-      name: "BRAI",
-      url: "https://www.brai.dev",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.brai.dev/blog/${post.slug}`,
-    },
-  } as const;
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ content: JSON.stringify(jsonLd) } as any}
-    />
-  );
-}
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      datePublished: post.published_at,
+      dateModified: post.updated_at,
+      image: post.cover_image_url || undefined,
+      author: { "@type": "Organization", name: "BRAI", url: "https://www.brai.dev" },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.brai.dev/blog/${post.slug}` },
+    };
+  
+    return (
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    );
+  }
+  
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
