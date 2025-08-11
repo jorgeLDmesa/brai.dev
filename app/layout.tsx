@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   keywords: ['brai agencia', 'agencia automatización', 'automatización colombia', 'brai automatización', 'IA', 'inteligencia artificial', 'procesos empresariales', 'desarrollo software'],
   authors: [{ name: 'brai' }],
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'es_ES',
@@ -52,8 +55,29 @@ export default function RootLayout({
               }],
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "CO"
+                "addressLocality": "Medellín",
+                "addressRegion": "Antioquia", 
+                "addressCountry": "Colombia",
+                "postalCode": "050001"
               },
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Colombia"
+                },
+                {
+                  "@type": "City",
+                  "name": "Medellín" 
+                },
+                {
+                  "@type": "City", 
+                  "name": "Bogotá"
+                },
+                {
+                  "@type": "City",
+                  "name": "Cali"
+                }
+              ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+573182243673",
