@@ -40,6 +40,10 @@ const ContactSection = dynamic(() => import("@/components/contact-section"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
+const FloatingContactPopup = dynamic(() => import("@/components/floating-contact-popup"), {
+  loading: () => null
+})
+
 export default function Home() {
   return (
     <>
@@ -97,6 +101,9 @@ export default function Home() {
           <ContactSection />
         </Suspense>
       </main>
+      
+      {/* Popup flotante de contacto */}
+      <FloatingContactPopup />
     </>
   )
 }
