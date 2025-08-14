@@ -37,6 +37,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        {/* Google Search Console Verification - Reemplaza con tu código */}
+        {/* <meta name="google-site-verification" content="TU_CODIGO_AQUI" /> */}
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{
