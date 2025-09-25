@@ -9,6 +9,7 @@ const clients = [
   { name: "Guayacanes", logo: "/guayacanes-logo.webp" },
   { name: "Nubesti", logo: "/nubesti-logo.webp" },
   { name: "Ancla", logo: "/ancla-logo.webp" },
+  { name: "Zafiro", logo:"/zafiro copy.webp"}
 ]
 
 export default function ClientsCarousel() {
@@ -33,8 +34,7 @@ export default function ClientsCarousel() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat font-bold"
           >
             EMPRESAS QUE<span className="text-[#9ACA3C]">*</span> CONFÍAN EN NOSOTROS
           </h2>
@@ -53,8 +53,7 @@ export default function ClientsCarousel() {
         >
           <div className="text-center">
             <div
-              className="text-4xl md:text-5xl font-bold text-[#9ACA3C] mb-2"
-              style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+              className="text-4xl md:text-5xl font-bold text-[#9ACA3C] mb-2 font-montserrat font-bold"
             >
               +50
             </div>
@@ -62,8 +61,7 @@ export default function ClientsCarousel() {
           </div>
           <div className="text-center">
             <div
-              className="text-4xl md:text-5xl font-bold text-[#D6F050] mb-2"
-              style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+              className="text-4xl md:text-5xl font-bold text-[#D6F050] mb-2 font-montserrat font-bold"
             >
               70%
             </div>
@@ -71,8 +69,7 @@ export default function ClientsCarousel() {
           </div>
           <div className="text-center">
             <div
-              className="text-4xl md:text-5xl font-bold text-[#9ACA3C] mb-2"
-              style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+              className="text-4xl md:text-5xl font-bold text-[#9ACA3C] mb-2 font-montserrat font-bold"
             >
               24/7
             </div>
@@ -135,8 +132,7 @@ export default function ClientsCarousel() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="px-8 py-4 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold rounded-full text-lg hover:from-[#D6F050] hover:to-[#9ACA3C] transition-all font-montserrat font-bold"
           >
             Únete a Nuestros Clientes
           </motion.button>

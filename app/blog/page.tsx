@@ -50,7 +50,7 @@ export default async function BlogIndexPage() {
       <header className="mb-10 text-center">
         <h1 
           className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+          className="font-montserrat font-bold"
         >
           BLOG BRAI<span className="text-[#9ACA3C]">*</span> AUTOMATIZACIÓN IA COLOMBIA
         </h1>

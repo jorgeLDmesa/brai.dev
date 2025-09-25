@@ -49,7 +49,7 @@ export default function Home() {
     <>
       <style jsx global>{`
         h1, h2, h3, h4, h5, h6 {
-          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-family: 'Montserrat', sans-serif;
         }
       `}</style>
       <main className="min-h-screen bg-black text-white">

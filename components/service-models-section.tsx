@@ -3,29 +3,23 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { CheckCircle, ArrowRight, Star, Zap, Shield, Clock, TrendingUp, Users, Headphones } from "lucide-react"
+import { CheckCircle, ArrowRight, Zap, Clock, TrendingUp, Headphones } from "lucide-react"
 
-// Datos para el modelo BRAI Partner
-const braiPartnerFeatures = [
-  "Múltiples automatizaciones integradas",
-  "Consultoría estratégica continua",
-  "Soporte técnico 24/7 prioritario",
-  "Capacitaciones especializadas del equipo",
-  "Participación activa en tu crecimiento",
-]
 
 // Datos para BRAI AaaS
 const braiAaaSFeatures = [
   "50% al iniciar implementación",
   "50% al completar y poner en marcha",
-  "Mensualidad de mantenimiento y soporte",
+  "Mensualidad del servicio completo (incluye soporte, mantenimiento y mejoras continuas)",
 ]
 
 const braiAaaSIncludes = [
   "Liberación de cargas laborales repetitivas",
   "Recursos humanos disponibles para tareas estratégicas",
-  "Soporte técnico especializado incluido",
-  "Actualizaciones y mejoras continuas",
+  "Soporte técnico especializado 24/7",
+  "Actualizaciones y mejoras continuas del sistema",
+  "Monitoreo proactivo del rendimiento",
+  "Reportes mensuales de eficiencia y ahorro",
 ]
 
 // Componente para las tarjetas de modelo
@@ -83,8 +77,7 @@ function ModelCard({
             {icon}
           </div>
           <h3
-            className="text-3xl font-bold text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-3xl font-bold text-white font-montserrat font-bold"
           >
             {title}
           </h3>
@@ -155,57 +148,27 @@ export default function ServiceModelsSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
-            NUESTROS MODELOS<span className="text-[#9ACA3C]">*</span> DE AUTOMATIZACIÓN
+            NUESTRO MODELO<span className="text-[#9ACA3C]">*</span> DE AUTOMATIZACIÓN
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Dos enfoques diseñados para diferentes necesidades empresariales. Elige el modelo que mejor se adapte a tu
-            visión de crecimiento.
+            Un enfoque integral diseñado para transformar tu empresa. Automatización específica de procesos
+            con resultados garantizados y soporte continuo.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <ModelCard
-            title="BRAI Partner"
-            subtitle="Automatización Empresarial Completa"
-            description="Nos convertimos en tu socio estratégico"
-            features={braiPartnerFeatures}
-            icon={<Star className="h-6 w-6 text-black" />}
-            isPremium={true}
-            gradient="from-[#9ACA3C] to-[#D6F050]"
-            buttonText="Convertirse en Partner BRAI"
-            onButtonClick={() => scrollToSection('contact')}
-          >
-            <div className="mb-6 bg-zinc-800 rounded-lg p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <Shield className="h-5 w-5 text-[#9ACA3C]" />
-                <span className="text-white font-semibold">Compromiso mínimo:</span>
-              </div>
-              <p className="text-gray-300">18 meses de partnership estratégico</p>
-            </div>
-
-            <div className="mb-6">
-              <div className="flex items-center gap-3 mb-3">
-                <Users className="h-5 w-5 text-[#9ACA3C]" />
-                <span className="text-white font-semibold">Ideal para:</span>
-              </div>
-              <p className="text-gray-300">
-                Empresas que buscan transformación digital completa y crecimiento acelerado
-              </p>
-            </div>
-          </ModelCard>
+        <div className="flex justify-center max-w-6xl mx-auto">
 
           <ModelCard
-            title="BRAI AaaS"
-            subtitle="Automation as a Service"
+            title="PAS"
+            subtitle="Procesos como Servicio"
             description="Automatización específica como servicio"
             features={braiAaaSFeatures}
             icon={<Zap className="h-6 w-6 text-black" />}
             isPopular={true}
             gradient="from-[#D6F050] to-[#9ACA3C]"
-            buttonText="Comenzar mi Automatización"
+            buttonText="Comenzar mi Proceso"
             onButtonClick={() => scrollToSection('contact')}
           >
             <div className="mb-6 bg-gradient-to-r from-zinc-800 to-zinc-700 rounded-lg p-4">
@@ -246,6 +209,14 @@ export default function ServiceModelsSection() {
                 ))}
               </ul>
             </div>
+
+            <div className="mb-6 bg-zinc-800 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <TrendingUp className="h-5 w-5 text-[#9ACA3C]" />
+                <span className="text-white font-semibold">Descuento por volumen:</span>
+              </div>
+              <p className="text-gray-300">Mientras más procesos contrates, menor será la mensualidad</p>
+            </div>
           </ModelCard>
         </div>
 
@@ -256,7 +227,7 @@ export default function ServiceModelsSection() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <p className="text-xl text-gray-300 mb-8">¿No estás seguro cuál modelo es mejor para ti?</p>
+          <p className="text-xl text-gray-300 mb-8">¿Quieres saber más sobre nuestro modelo PAS?</p>
           <button 
             onClick={() => scrollToSection('contact')}
             className="px-8 py-4 bg-transparent border-2 border-[#9ACA3C] text-[#9ACA3C] font-bold rounded-full text-lg hover:bg-[#9ACA3C] hover:text-black transition-all transform hover:scale-105"

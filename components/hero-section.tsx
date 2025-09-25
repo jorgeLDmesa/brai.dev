@@ -174,7 +174,7 @@ export default function HeroSection() {
         </div>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Link href="/" className="text-[#9ACA3C] font-bold text-2xl md:text-3xl lg:text-4xl tracking-wider">
+          <Link href="/" className="text-[#9ACA3C] font-black text-2xl md:text-3xl lg:text-4xl tracking-wider font-montserrat">
             BRAI
           </Link>
         </div>
@@ -211,8 +211,7 @@ export default function HeroSection() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-3xl font-extrabold my-3 py-2 text-white hover:text-[#D6F050] transition-colors duration-200 tracking-wider"
-                  style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                  className="text-3xl font-extrabold my-3 py-2 text-white hover:text-[#D6F050] transition-colors duration-200 tracking-wider font-montserrat"
                 >
                   {item.label}
                 </button>
@@ -224,29 +223,26 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-4 text-center pt-4 md:pt-6">
-        <h1
-          className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold leading-none tracking-tight mb-4 max-w-5xl"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
-        >
+        <h1 className="text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tight mb-4 max-w-5xl font-montserrat">
           AUTOMATIZA TODO.
           <br />
           AHORRA 70% DEL TIEMPO.
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mb-10 leading-relaxed">
+        <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mb-10 leading-relaxed font-medium font-montserrat">
           Somos BRAI, la agencia de automatización con IA que libera a tu equipo de tareas repetitivas. Garantizamos +70% ahorro de tiempo y +50% reducción de costos.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button 
+          <button
             onClick={() => scrollToSection('contact')}
-            className="bg-[#9ACA3C] text-black font-bold py-4 px-10 rounded-full text-xl hover:bg-white transition-colors duration-300"
+            className="bg-[#9ACA3C] text-black font-bold py-4 px-10 rounded-full text-xl hover:bg-white transition-colors duration-300 font-montserrat"
           >
             🚀 Auditoría GRATUITA
           </button>
-          <button 
+          <button
             onClick={() => scrollToSection('portfolio')}
-            className="border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-colors duration-300"
+            className="border-2 border-white text-white font-semibold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-black transition-colors duration-300 font-montserrat"
           >
             Ver Casos de Éxito
           </button>
@@ -265,7 +261,7 @@ export default function HeroSection() {
               <X size={24} />
             </button>
             <div className="text-center">
-              <h3 className="text-3xl font-bold mb-4 text-[#D6F050]">¡Gracias por contactarnos!</h3>
+              <h3 className="text-3xl font-bold mb-4 text-[#D6F050] font-montserrat">¡Gracias por contactarnos!</h3>
               <p className="mb-6 text-lg leading-relaxed">
                 Utilizaremos tu número de WhatsApp para ponernos en contacto contigo y discutir tu proyecto. 
                 Nuestros servicios están diseñados para proyectos con presupuestos a partir de 5M COP (1250 USD), 

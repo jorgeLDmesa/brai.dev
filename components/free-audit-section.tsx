@@ -104,8 +104,7 @@ export default function FreeAuditSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
             DESCUBRE TU POTENCIAL<span className="text-[#9ACA3C]">*</span> DE AUTOMATIZACIÓN
           </h2>
@@ -115,8 +114,7 @@ export default function FreeAuditSection() {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="inline-block bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black px-8 py-3 rounded-full text-xl font-bold mb-6"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="inline-block bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black px-8 py-3 rounded-full text-xl font-bold mb-6 font-montserrat font-bold"
           >
             AUDITORÍA GRATUITA
           </motion.div>
@@ -147,8 +145,7 @@ export default function FreeAuditSection() {
           className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 mb-16"
         >
           <h3
-            className="text-3xl font-bold text-white mb-8 text-center"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center font-montserrat"
           >
             LO QUE INCLUYE<span className="text-[#9ACA3C]">*</span> TU AUDITORÍA GRATUITA
           </h3>
@@ -189,8 +186,7 @@ export default function FreeAuditSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="px-12 py-6 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold text-xl rounded-full transition-all hover:from-[#D6F050] hover:to-[#9ACA3C] shadow-lg hover:shadow-xl"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="px-12 py-6 bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold text-xl rounded-full transition-all hover:from-[#D6F050] hover:to-[#9ACA3C] shadow-lg hover:shadow-xl font-montserrat font-bold"
           >
             SOLICITAR AUDITORÍA GRATUITA
           </motion.button>
