@@ -30,77 +30,77 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Corporation",
+    "name": "BRAI",
+    "alternateName": "BRAI Agencia de Automatizacion",
+    "url": "https://www.brai.dev",
+    "logo": "https://www.brai.dev/logo.png",
+    "description": "BRAI es una agencia de automatizacion lider en Colombia que transforma procesos empresariales con inteligencia artificial",
+    "foundingDate": "2023",
+    "founders": [{
+      "@type": "Person",
+      "name": "Jorge Mesa"
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Medellin",
+      "addressRegion": "Antioquia",
+      "addressCountry": "Colombia",
+      "postalCode": "050001"
+    },
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "Colombia"
+      },
+      {
+        "@type": "City",
+        "name": "Medellin"
+      },
+      {
+        "@type": "City",
+        "name": "Bogota"
+      },
+      {
+        "@type": "City",
+        "name": "Cali"
+      }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+573182243673",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/brai-dev",
+      "https://github.com/brai-dev"
+    ],
+    "serviceType": [
+      "Automatizacion de procesos",
+      "Inteligencia artificial",
+      "Desarrollo de software",
+      "Consultoria tecnologica"
+    ]
+  }
+
   return (
     <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        {/* Google Search Console Verification - Reemplaza con tu código */}
-        {/* <meta name="google-site-verification" content="TU_CODIGO_AQUI" /> */}
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Corporation",
-              "name": "BRAI",
-              "alternateName": "BRAI Agencia de Automatización",
-              "url": "https://www.brai.dev",
-              "logo": "https://www.brai.dev/logo.png",
-              "description": "BRAI es una agencia de automatización líder en Colombia que transforma procesos empresariales con inteligencia artificial",
-              "foundingDate": "2023",
-              "founders": [{
-                "@type": "Person",
-                "name": "Jorge Mesa"
-              }],
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Medellín",
-                "addressRegion": "Antioquia", 
-                "addressCountry": "Colombia",
-                "postalCode": "050001"
-              },
-              "areaServed": [
-                {
-                  "@type": "Country",
-                  "name": "Colombia"
-                },
-                {
-                  "@type": "City",
-                  "name": "Medellín" 
-                },
-                {
-                  "@type": "City", 
-                  "name": "Bogotá"
-                },
-                {
-                  "@type": "City",
-                  "name": "Cali"
-                }
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+573182243673",
-                "contactType": "customer service",
-                "availableLanguage": "Spanish"
-              },
-              "sameAs": [
-                "https://linkedin.com/company/brai-dev",
-                "https://github.com/brai-dev"
-              ],
-              "serviceType": [
-                "Automatización de procesos",
-                "Inteligencia artificial",
-                "Desarrollo de software",
-                "Consultoría tecnológica"
-              ]
-            })
-          }}
-        />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
         {children}
       </body>
     </html>
