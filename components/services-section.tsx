@@ -53,8 +53,7 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
             SERVICIOS Y<span className="text-[#9ACA3C]">*</span> TECNOLOGÍAS
           </h2>

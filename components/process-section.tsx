@@ -56,8 +56,7 @@ export default function ProcessSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white font-montserrat"
           >
             NUESTRO PROCESO<span className="text-[#9ACA3C]">*</span>
           </h2>
@@ -83,7 +82,7 @@ export default function ProcessSection() {
                 <div className={`w-full md:w-1/2 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                   <h3
                     className="text-2xl md:text-3xl font-bold mb-4 text-white"
-                    style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                    className="font-montserrat font-bold"
                   >
                     {index + 1}. {step.title}
                   </h3>

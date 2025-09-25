@@ -53,8 +53,7 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white font-montserrat"
           >
             SOLICITA TU<span className="text-[#9ACA3C]">*</span> AUDITORÍA GRATUITA
           </h2>
@@ -75,8 +74,7 @@ export default function ContactSection() {
               {/* Header del formulario */}
               <div className="bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] p-6 text-center">
                 <h3
-                  className="text-2xl font-bold text-black mb-2"
-                  style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                  className="text-2xl font-bold text-black mb-2 font-montserrat"
                 >
                   🚀 CONTÁCTANOS
                 </h3>
@@ -230,7 +228,7 @@ export default function ContactSection() {
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold text-lg py-4 rounded-full transition-all hover:from-[#D6F050] hover:to-[#9ACA3C] shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-                      style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                      className="font-montserrat font-bold"
                     >
                       {isSubmitting ? 'ENVIANDO...' : 'ENVIAR SOLICITUD'}
                     </motion.button>
@@ -289,8 +287,7 @@ export default function ContactSection() {
             {/* Información principal */}
             <div className="bg-zinc-900 rounded-2xl border border-zinc-800 p-8">
               <h3
-                className="text-2xl font-bold text-white mb-6"
-                style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-montserrat"
               >
                 INFORMACIÓN<span className="text-[#9ACA3C]">*</span> DE CONTACTO
               </h3>
@@ -306,8 +303,7 @@ export default function ContactSection() {
                   <Mail className="w-8 h-8 text-[#9ACA3C] mt-1 flex-shrink-0" />
                   <div>
                     <h4
-                      className="text-xl font-bold text-white mb-1"
-                      style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                      className="text-xl font-bold text-white mb-1 font-montserrat"
                     >
                       Email
                     </h4>
@@ -328,8 +324,7 @@ export default function ContactSection() {
                   <Phone className="w-8 h-8 text-[#9ACA3C] mt-1 flex-shrink-0" />
                   <div>
                     <h4
-                      className="text-xl font-bold text-white mb-1"
-                      style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                      className="text-xl font-bold text-white mb-1 font-montserrat"
                     >
                       Teléfono
                     </h4>
@@ -350,8 +345,7 @@ export default function ContactSection() {
                   <MapPin className="w-8 h-8 text-[#9ACA3C] mt-1 flex-shrink-0" />
                   <div>
                     <h4
-                      className="text-xl font-bold text-white mb-1"
-                      style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                      className="text-xl font-bold text-white mb-1 font-montserrat"
                     >
                       Oficina
                     </h4>
@@ -371,8 +365,7 @@ export default function ContactSection() {
               className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl border border-zinc-700 p-6"
             >
               <h4
-                className="text-xl font-bold text-white mb-4 flex items-center gap-2"
-                style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                className="text-xl font-bold text-white mb-4 flex items-center gap-2 font-montserrat"
               >
                 <Rocket className="h-6 w-6 text-[#9ACA3C]" />
                 NUESTRAS GARANTÍAS

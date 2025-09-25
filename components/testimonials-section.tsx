@@ -108,14 +108,14 @@ function TestimonialCard({ videoUrl, quote, name, company, position }: Testimoni
         <div className="flex items-center">
           <div
             className="h-12 w-12 rounded-full bg-[#9ACA3C] flex items-center justify-center text-black font-bold"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="font-montserrat font-bold"
           >
             {name.charAt(0)}
           </div>
           <div className="ml-4">
             <p
               className="font-bold text-white"
-              style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+              className="font-montserrat font-bold"
             >
               {name}
             </p>
@@ -144,8 +144,7 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white font-montserrat"
           >
             NUESTROS CLIENTES<span className="text-[#9ACA3C]">*</span> HABLAN
           </h2>

@@ -76,7 +76,7 @@ function ModelCard({
         </div>
         <h3
           className="text-3xl font-bold mb-2 text-white"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+          className="font-montserrat font-bold"
         >
           {title}
         </h3>
@@ -217,8 +217,7 @@ export default function ServiceModelsSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
             NUESTROS MODELOS<span className="text-[#9ACA3C]">*</span> DE SERVICIO
           </h2>
@@ -265,7 +264,7 @@ export default function ServiceModelsSection() {
         >
           <h3
             className="text-2xl md:text-3xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="font-montserrat font-bold"
           >
             ¿NO SABES CUÁL ELEGIR?
           </h3>

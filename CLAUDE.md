@@ -36,7 +36,7 @@ This is "brai.dev" - a Next.js 15 website for a development agency called "brai"
 ### Styling & Design System
 - Dark theme with black background (#000000) and bright green accent colors
 - Shadcn/ui configuration in `components.json`
-- Custom font family for headings: Impact, Haettenschweiler, 'Arial Narrow Bold'
+- Custom font family for headings: Montserrat
 - CSS variables system for consistent theming
 - Responsive design patterns
 

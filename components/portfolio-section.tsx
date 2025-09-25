@@ -399,8 +399,7 @@ export default function PortfolioSection() {
             Resultados reales de nuestros clientes
           </p>
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
             CASOS DE<span className="text-[#9ACA3C]">*</span> ÉXITO
           </h2>

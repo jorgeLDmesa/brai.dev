@@ -63,7 +63,17 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        sans: ["Montserrat", "var(--font-sans)", "system-ui", "sans-serif"],
+        montserrat: ["Montserrat", "system-ui", "sans-serif"],
+      },
+      fontWeight: {
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
       },
       borderRadius: {
         lg: "var(--radius)",

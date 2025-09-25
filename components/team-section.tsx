@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Jorge David",
     role: "Fundador & CEO",
-    imageUrl: "/jorge.jpeg",
+    imageUrl: "/jorge.webp",
     bio: "Físico Teórico con especialización en Machine Learning y Deep Learning. Más de 2 años desarrollando soluciones de IA para empresas. Su enfoque científico riguroso garantiza que cada proyecto esté respaldado por fundamentos sólidos y metodologías probadas.",
     linkedin: "https://www.linkedin.com/in/jorge-luis-david-mesa/",
     github: "https://github.com/jorgeLDmesa",
@@ -16,17 +16,24 @@ const teamMembers = [
   {
     name: "Santiago Cañola",
     role: "Director de Proyectos & Operaciones",
-    imageUrl: "/pele.jpeg",
-    bio: "Ingeniero Civil con más de 5 años de experiencia en formulación y gestión de proyectos de gran escala. Diplomado en metodologías ágiles y Scrum Master certificado. Su expertise en planificación estratégica y ejecución garantiza entregas puntuales y dentro del presupuesto.",
+    imageUrl: "/pele.webp",
+    bio: "Ingeniero Civil con más de 5 años de experiencia en formulación y gestión de proyectos de gran escala. Especialista en metodologías ágiles y Scrum Master certificado.",
     linkedin: "https://www.linkedin.com/in/santiago-ca%C3%B1ola-25a962292/",
   },
   {
     name: "Anderson Medina",
     role: "Director de Ingeniería de Software",
-    imageUrl: "/anderson.jpeg",
+    imageUrl: "/anderson.webp",
     bio: "Ingeniero de Software especializado en logística con amplia experiencia en empresas líderes como Mercado Libre. Experto en arquitecturas escalables y sistemas de alto rendimiento que soportan millones de transacciones diarias.",
     linkedin: "https://www.linkedin.com/in/anderson-medina-arango-7b8b671b6/",
     github: "https://github.com/Anders1718",
+  },
+  {
+    name: "Sebastian Montoya",
+    role: "Director de Tecnología de Instrumentación",
+    imageUrl: "/sebastian.webp",
+    bio: "Físico con años de experiencia en instrumentación desde la academia, habiendo formado parte del CERN. Especialista en sistemas de monitoreo con enfoque en el sector agrícola y diversos proyectos de tecnología operacional.",
+    linkedin: "https://www.linkedin.com/in/sebastian-montoya-1a0733242/",
   },
 ]
 
@@ -42,8 +49,7 @@ export default function TeamSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white font-montserrat"
           >
             NUESTRO EQUIPO<span className="text-[#9ACA3C]">*</span> DE ÉLITE
           </h2>

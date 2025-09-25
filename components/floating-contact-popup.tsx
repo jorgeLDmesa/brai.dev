@@ -104,7 +104,7 @@ export default function FloatingContactPopup() {
                 <div>
                   <h3
                     className="text-lg font-bold text-black leading-tight"
-                    style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                    className="font-montserrat font-bold"
                   >
                     ¿NECESITAS AUTOMATIZAR?
                   </h3>
@@ -169,7 +169,7 @@ export default function FloatingContactPopup() {
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-[#9ACA3C] to-[#D6F050] text-black font-bold py-2.5 rounded-lg transition-all hover:from-[#D6F050] hover:to-[#9ACA3C] disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-                      style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+                      className="font-montserrat font-bold"
                     >
                       {isSubmitting ? 'ENVIANDO...' : 'CONTACTAR AHORA'}
                     </motion.button>

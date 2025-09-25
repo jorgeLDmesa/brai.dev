@@ -61,7 +61,7 @@ function FAQItem({ question, answer }: FAQItemProps) {
       <button onClick={() => setIsOpen(!isOpen)} className="flex justify-between items-center w-full text-left">
         <h3
           className="text-xl md:text-2xl font-bold text-white"
-          style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+          className="font-montserrat font-bold"
         >
           {question}
         </h3>
@@ -102,8 +102,7 @@ export default function FAQSection() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white font-montserrat"
           >
             PREGUNTAS<span className="text-[#9ACA3C]">*</span> FRECUENTES
           </h2>
