@@ -30,9 +30,9 @@ const teamMembers = [
   },
   {
     name: "Sebastian Montoya",
-    role: "Director de Tecnología de Instrumentación",
+    role: "Director de Hardware",
     imageUrl: "/sebastian.webp",
-    bio: "Físico con años de experiencia en instrumentación desde la academia, habiendo formado parte del CERN. Especialista en sistemas de monitoreo con enfoque en el sector agrícola y diversos proyectos de tecnología operacional.",
+    bio: "Físico con años de experiencia en hardware desde la academia, habiendo formado parte del CERN. Especialista en sistemas de monitoreo con enfoque en el sector agrícola y diversos proyectos de tecnología operacional.",
     linkedin: "https://www.linkedin.com/in/sebastian-montoya-1a0733242/",
   },
 ]
