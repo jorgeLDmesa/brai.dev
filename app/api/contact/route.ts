@@ -33,7 +33,7 @@ Este email fue enviado desde el formulario de contacto de brai.dev
     `;
 
     const data = await resend.emails.send({
-      from: 'noreply@brai.site',
+      from: 'noreply@mail.papeleo.co',
       to: ['jorge@brai.dev', 'santiago@brai.dev'],
       subject: `${consultationType === 'audit' ? '🚀 Nueva Auditoría' : '💬 Nueva Consulta'} - ${name}`,
       text: emailContent,
