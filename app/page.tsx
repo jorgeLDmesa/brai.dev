@@ -24,9 +24,9 @@ const PortfolioSection = dynamic(() => import("@/components/portfolio-section"),
   loading: () => <div className="h-96 bg-black animate-pulse" />
 })
 
-const TeamSection = dynamic(() => import("@/components/team-section"), {
-  loading: () => <div className="h-96 bg-black animate-pulse" />
-})
+// const TeamSection = dynamic(() => import("@/components/team-section"), {
+//   loading: () => <div className="h-96 bg-black animate-pulse" />
+// })
 
 const TestimonialsSection = dynamic(() => import("@/components/testimonials-section"), {
   loading: () => <div className="h-96 bg-black animate-pulse" />
@@ -81,10 +81,11 @@ export default function Home() {
           <PortfolioSection />
         </Suspense>
         
-        {/* 7. Nuestro Equipo */}
+        {/* 7. Nuestro Equipo (oculto temporalmente)
         <Suspense fallback={<div className="h-96 bg-black animate-pulse" />}>
           <TeamSection />
         </Suspense>
+        */}
         
         {/* 8. Testimoniales */}
         <Suspense fallback={<div className="h-96 bg-black animate-pulse" />}>
